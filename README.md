@@ -1,2 +1,4 @@
 # adventofcode2022
-my solution code
+Solution code for the problems. 
+
+1) Quick shell work....
