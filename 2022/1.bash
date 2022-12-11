@@ -6,7 +6,7 @@ INC=1
 ELFS[$INT]=0
 
 #pasted the data set to a file
-INGEST=`cat /tmp/aoc2022-1 | sed 's|^$|NULL|g'`
+INGEST=`cat 1.input | sed 's|^$|NULL|g'`
 
 for FOOD in $INGEST
 do

@@ -16,7 +16,7 @@ from sys import exit
 total_points = 0
 
 try:
-    f = open("aoc2022-2-input", 'r')
+    f = open("2.input", 'r')
     for set in f:
         results = my_points = 0
         pair = set.replace(" ","")

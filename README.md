@@ -1,4 +1,3 @@
-# adventofcode2022
-Solution code for the problems. 
+# Advent of Code 
 
-1) Quick shell work....
+## Yearly folders
