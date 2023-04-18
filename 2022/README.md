@@ -1,5 +1,6 @@
 # adventofcode2022
 Solution code for the problems. 
+(quick "on the train" solutions...as a distraction. Maybe next year I will take it serious from the start.)
 
 1) Quick shell work....
 2) Crappy python in two files...ooof.
