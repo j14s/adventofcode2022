@@ -1,4 +1,7 @@
 # adventofcode2022
+
+## Python quick tries....don't judge
+
 Solution code for the problems. 
 (quick "on the train" solutions...as a distraction. Maybe next year I will take it serious from the start.)
 
