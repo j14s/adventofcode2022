@@ -1,4 +1,4 @@
-# AoC 2023 Golang
+# AoC 2023 Go
 
 
 ### Days
