@@ -33,8 +33,7 @@ func DayOne(part string) {
 
 	for _, line := range lines {
 		fmt.Println(line)
-		var firstNum int = 0
-		var lastNum int = 0
+		var firstNum, lastNum int
 		for _, singleChar := range strings.Split(line, "") {
 			if c, err := strconv.Atoi(singleChar); err == nil {
 				if firstNum == 0 {
@@ -50,7 +49,9 @@ func DayOne(part string) {
 			regexdigit := regexp.MustCompile("[0-9]")
 			numslice := []string(regexdigit.Split(line, -1))
 			fwni := len(numslice[0])
-			lwni := -1
+			lwni := 0
+			fmt.Printf("%s\n", numslice[0])
+			fmt.Printf("%s\n", numslice[len(numslice)-1])
 
 			for wnum, dnum := range wnums {
 
@@ -63,10 +64,11 @@ func DayOne(part string) {
 						firstNum = dnum
 					}
 				}
-				postfoundindex := pattern.FindStringIndex(numslice[len(numslice)-1])
+				postfoundindex := pattern.FindAllStringIndex(numslice[len(numslice)-1], -1)
 				if len(postfoundindex) > 0 {
-					if postfoundindex[0] > lwni {
-						lwni = postfoundindex[0]
+					fmt.Printf("PFI Len: %d\n", len(postfoundindex))
+					if postfoundindex[len(postfoundindex)-1][0] >= lwni {
+						lwni = postfoundindex[len(postfoundindex)-1][0]
 						lastNum = dnum
 					}
 				}
