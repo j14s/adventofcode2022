@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
 	"regexp"
 	"slices"
 	"strings"
@@ -22,9 +23,11 @@ func main() {
 	} else if 3 <= len(*day) && len(*day) <= 4 && digmatch.MatchString(*day) {
 		ddigits := strings.Split(*day, ".")
 		ddig, dstep := ddigits[0], ddigits[1]
-		fmt.Printf("Received Day: %s Part: %s\n", ddig, dstep)
+		fmt.Fprintf(os.Stderr, "Received Day: %s Part: %s\n", ddig, dstep)
 		if ddig == "1" && slices.Contains([]string{"1", "2"}, dstep) {
 			days.DayOne(dstep)
+		} else if ddig == "2" && slices.Contains([]string{"1", "2"}, dstep) {
+			days.DayTwo(dstep)
 		} else {
 			fmt.Printf("Day and Part did not match current capabilities. Exiting.\n")
 		}
