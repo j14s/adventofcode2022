@@ -28,6 +28,8 @@ func main() {
 			days.DayOne(dstep)
 		} else if ddig == "2" && slices.Contains([]string{"1", "2"}, dstep) {
 			days.DayTwo(dstep)
+		} else if ddig == "3" && slices.Contains([]string{"1", "2"}, dstep) {
+			days.DayThree(dstep)
 		} else {
 			fmt.Printf("Day and Part did not match current capabilities. Exiting.\n")
 		}
